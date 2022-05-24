@@ -2,10 +2,10 @@ version: '3'
 services:
   web:
     build: 
-      context: .
       dockerfile: Dockerfile.dev
+      context: .
     ports:
       - "3000:3000"
     volumes:
       - /home/node/app/node_modules
-      - .:/home/node/app
+      - ~/frontend/frontend:/home/node/app
