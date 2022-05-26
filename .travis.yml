@@ -14,5 +14,5 @@ deploy:
   bucket_path: "docker-react2" # equals to appname
   on:
     branch: master ##whoch branch to be deployed
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY # from IAM Management console add user and set on travis CI env variables
+  secret_access_key: $AWS_SECRET_KEY # from IAM Management console add user and set on travis CI env variables
