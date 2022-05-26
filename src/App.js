@@ -10,7 +10,7 @@ class App extends Component{
         <img src={logo} className="App-logo" alt="logo" />
     <h1> Learn React Tugba was changed </h1>
       </header>
-      <p className='App-intro'>HI there Tugba!</p>
+      <p className='App-intro'>HI there Tugba test!</p>
  
     </div>
   );
