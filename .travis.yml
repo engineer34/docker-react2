@@ -5,3 +5,14 @@ before_install:
   - docker build -t queengineer/docker-react2 -f Dockerfile.dev .
 script:
   - docker run -e CI=true queengineer/docker-react2 npm run test  ##e Set environment variables
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1" #http://dockerreact2-env.eba-iuf62dhd.us-east-1.elasticbeanstalk.com/
+  app: "docker-react2"
+  env: "Dockerreact2-env"
+  bucket_name: "elasticbeanstalk-us-east-1-000215741983" ## from s3 storage created with ebs on AWS
+  bucket_path: "docker-react2" # equals to appname
+  on:
+    branch: master ##whoch branch to be deployed
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
